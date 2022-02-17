@@ -37,6 +37,7 @@ def prepareInfra() {
 def setup() {
   currentStageName = 'Setup'
   stage(currentStageName) {
-    logger.info("Some random log message")
+    logger.info("Some random info log message")
+    logger.info("Some random trace log message")
   }
 }
