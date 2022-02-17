@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
+@def currentStageName = ''
+
 node['label'] = 'master'
 
 /**
@@ -11,6 +13,16 @@ node['label'] = 'master'
  */
 def call(args) {
   runOnJenkins(node) {
-    println "My first pipeline script. Feeling awesome"
+    setup()
+  }
+}
+
+/**
+ * 
+ */
+def setup() {
+  currentStageName = 'Setup'
+  stage(currentStageName) {
+    println "This is a set up stage."
   }
 }
