@@ -1,6 +1,6 @@
 package io.xenarius.utils.logging
 
-import import org.jenkinsci.plugins.workflow.cps.DSL
+import org.jenkinsci.plugins.workflow.cps.DSL
 
 /**
  * The logging functionality for the pipeline script
