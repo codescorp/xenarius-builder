@@ -16,6 +16,7 @@ node['label'] = 'master'
   *
  */
 def call(args) {
+  logger = new Logger(this)
   runOnJenkins(node) {
     setup()
   }
@@ -28,5 +29,6 @@ def setup() {
   currentStageName = 'Setup'
   stage(currentStageName) {
     echo "This is just an echo"
+    logger.info("Some random log message")
   }
 }
