@@ -227,8 +227,7 @@ class Logger implements Serializable {
       Class objectClass = object.getClass()
       objectName = objectClass.getName().toString()
       objectName = objectClass.getCanonicalName().toString()
-    } catch (RejectedAccessException e) {
-      // do nothing
+    } catch (Exception e) {
     }
 
     return objectName
