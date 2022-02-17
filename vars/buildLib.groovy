@@ -2,8 +2,11 @@
 
 import groovy.transform.Field
 
+import java.util.logging.Logger
+
 @Field def currentStageName = ''
 @Field def node = [:]
+@Field def logger
 
 node['label'] = 'master'
 
@@ -24,8 +27,9 @@ def call(args) {
  * 
  */
 def setup() {
+  logger = Logger.getLogger('MainPipeline')
   currentStageName = 'Setup'
   stage(currentStageName) {
-    println "This is a set up stage."
+    logger.info("Setting up all the environments.")
   }
 }
