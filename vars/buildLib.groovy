@@ -32,7 +32,6 @@ def call(args) {
 def setup() {
   currentStageName = 'Setup'
   stage(currentStageName) {
-    echo "This is just an echo"
     logger.info("Some random log message")
   }
 }
