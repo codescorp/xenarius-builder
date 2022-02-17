@@ -18,6 +18,7 @@ node['label'] = 'master'
   *
  */
 def call(args) {
+  Logger logger = new Logger(this)
   runOnJenkins(node) {
     setup()
   }
@@ -27,9 +28,9 @@ def call(args) {
  * 
  */
 def setup() {
-  Logger logger = new Logger(this)
+  logger.info("Setting up all the environments.")
   currentStageName = 'Setup'
   stage(currentStageName) {
-    logger.info("Setting up all the environments.")
+    
   }
 }
