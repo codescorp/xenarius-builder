@@ -19,6 +19,7 @@ node['label'] = 'master'
   *
  */
 def call(args) {
+  prepareInfra()
   runOnJenkins(node) {
     setup()
   }
