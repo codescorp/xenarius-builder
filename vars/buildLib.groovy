@@ -31,6 +31,6 @@ def setup() {
   logger.info("Setting up all the environments.")
   currentStageName = 'Setup'
   stage(currentStageName) {
-    
+    echo "This is just an echo"
   }
 }
