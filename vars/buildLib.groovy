@@ -38,6 +38,6 @@ def setup() {
   currentStageName = 'Setup'
   stage(currentStageName) {
     logger.info("Some random info log message")
-    logger.info("Some random trace log message")
+    logger.trace("Some random trace log message")
   }
 }
