@@ -1,6 +1,8 @@
 #!/usr/bin/env groovy
 
-@def currentStageName = ''
+import groovy.transfor.Field
+
+@Field def currentStageName = ''
 
 node['label'] = 'master'
 
