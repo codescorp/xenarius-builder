@@ -3,6 +3,7 @@
 import groovy.transform.Field
 
 @Field def currentStageName = ''
+@Field def node = [:]
 
 node['label'] = 'master'
 
