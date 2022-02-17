@@ -19,7 +19,7 @@ node['label'] = 'master'
   *
  */
 def call(args) {
-  Logger.init(scripts, LogLevel.INFO)
+  Logger.init(script, LogLevel.INFO)
   logger = new Logger(this)
   runOnJenkins(node) {
     setup()
