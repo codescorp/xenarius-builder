@@ -2,7 +2,7 @@
 
 import groovy.transform.Field
 
-import java.util.logging.Logger
+import io.xenarius.utils.logging.Logger
 
 @Field def currentStageName = ''
 @Field def node = [:]
@@ -27,7 +27,7 @@ def call(args) {
  * 
  */
 def setup() {
-  logger = Logger.getLogger('MainPipeline')
+  Logger logger = new Logger(this)
   currentStageName = 'Setup'
   stage(currentStageName) {
     logger.info("Setting up all the environments.")
