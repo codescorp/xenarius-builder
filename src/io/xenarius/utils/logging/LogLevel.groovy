@@ -7,6 +7,17 @@ import com.cloudbees.groovy.cps.NonCPS
  */
 enum LogLevel implements Serializable {
 
+  ALL(0, 0),
+  TRACE(2, 8),
+  DEBUG(3, 12),
+  INFO(4, 0),
+  DEPRECATED(5, 93),
+  WARN(6, 202),
+  ERROR(7, 5),
+  FATAL(8, 9),
+  NONE(Integer.MAX_VALUE, 0)
+
+
   Integer level
   Integer color
 
