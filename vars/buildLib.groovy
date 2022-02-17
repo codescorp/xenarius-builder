@@ -32,5 +32,6 @@ def setup() {
   currentStageName = 'Setup'
   stage(currentStageName) {
     echo "This is just an echo"
+    logger.info("This is just some log message")
   }
 }
