@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import groovy.transfor.Field
+import groovy.transform.Field
 
 @Field def currentStageName = ''
 
