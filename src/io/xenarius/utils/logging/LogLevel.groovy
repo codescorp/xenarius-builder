@@ -20,6 +20,10 @@ enum LogLevel implements Serializable {
 
   Integer level
   Integer color
+  
+  private static final long serialVersionUID = 2L
+  
+  static COLOR_CODE_PREFIX = "1;38;5;"
 
   /**
    * 
