@@ -2,8 +2,6 @@
 
 import groovy.transform.Field
 
-import io.xenarius.utils.logging.Logger
-
 @Field def currentStageName = ''
 @Field def node = [:]
 @Field def logger
@@ -18,7 +16,6 @@ node['label'] = 'master'
   *
  */
 def call(args) {
-  logger = new Logger(this)
   runOnJenkins(node) {
     setup()
   }
@@ -28,10 +25,8 @@ def call(args) {
  * 
  */
 def setup() {
-  logger.info("Setting up all the environments.")
   currentStageName = 'Setup'
   stage(currentStageName) {
     echo "This is just an echo"
-    logger.info("This is just some log message")
   }
 }
