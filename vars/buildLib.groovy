@@ -19,14 +19,14 @@ node['label'] = 'master'
   *
  */
 def call(args) {
-  prepareInfra()
   runOnJenkins(node) {
+    prepareInfra()
     setup()
   }
 }
 
 def prepareInfra() {
-  LogLevel requestedLevel = LogLevel.fromString(${params.LOG_LEVEL})
+  LogLevel requestedLevel = LogLevel.fromString("${params.LOG_LEVEL}")
   Logger.init(this, requestedLevel)
   logger = new Logger(this)
 }
