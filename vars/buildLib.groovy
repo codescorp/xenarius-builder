@@ -3,6 +3,7 @@
 import groovy.transform.Field
 
 import io.xenarius.utils.logging.Logger
+import io.xenarius.utils.logging.LogLevel
 
 @Field def currentStageName = ''
 @Field def node = [:]
@@ -18,6 +19,7 @@ node['label'] = 'master'
   *
  */
 def call(args) {
+  Logger.init(steps, LogLevel.INFO)
   logger = new Logger(this)
   runOnJenkins(node) {
     setup()
