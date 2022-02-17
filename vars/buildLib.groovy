@@ -2,6 +2,8 @@
 
 import groovy.transform.Field
 
+import io.xenarius.utils.logging.Logger
+
 @Field def currentStageName = ''
 @Field def node = [:]
 @Field def logger
